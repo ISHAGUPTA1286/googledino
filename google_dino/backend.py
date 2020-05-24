@@ -41,6 +41,13 @@ def wheeler_2():
 def wheeler_4():
 	return render_template('4_wheeler.html')
 
+@app.route('/2_wheeler_visit.html')
+def visit_2():
+	return render_template('2_wheeler_visit.html')
+
+@app.route('/4_wheeler_visit.html')
+def visit_4():
+	return render_template('4_wheeler_visit.html')
 
 
 if __name__ == '__main__' :
