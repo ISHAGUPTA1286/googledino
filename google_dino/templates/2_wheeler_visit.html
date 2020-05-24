@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Dino - 2_wheeler_visit</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home.css')}}">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rajdhani:wght@600&family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<div class="menu-icon">
+			<i class="fa fa-bars fa-2x"><img id="logo" src="https://timesofindia.indiatimes.com/thumb/msid-70357330,imgsize-53996,width-400,resizemode-4/70357330.jpg"></i>
+		</div>
+	<div>
+		<ul>
+				<li><a href="home.html">home</a></li>
+				<li><a href="2_wheeler.html">2 wheeler</a></li>
+		</ul>
+	</div>
+	</nav>
+	<h1>2 Wheeler - Visit</h1>
+	<hr>
+	<p>2 Wheeler Vehicles ever visited IIITH</p>
+	<br>
+	<table class="table table-hover">
+	<thead>
+		<tr>
+			<th scope="col">Vehicle No.</th>
+			<th scope="col">Vehicle Model</th>
+			<th scope="col">Name</th>
+			<th scope="col">Phone</th>
+			<th scope="col">Arrival</th>
+			<th scope="col">Departure</th>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+		{% for info in wheeler_info_2 %}
+		<tr>
+			<td>{{ info.vehicleno }}</td>
+			<td>{{ info.vehiclemodel }}</td>
+			<td>{{ info.name }}</td>
+			<td>{{ info.phoneno }}</td>
+			<td>{{ info.arrival }}</td>
+			<td>{{ info.departure }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+</body>
+</html>
